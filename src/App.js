@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 function Square({ value, onSquareClick }) {
   return (
-    <button className="square" onClick={onSquareClick}>
+    <button className="square" data-testid="square" onClick={onSquareClick}>
       {value}
     </button>
   );
@@ -84,7 +84,7 @@ export default function Game() {
 
   return (
     <div className="game">
-      <div className="game-board">
+      <div className="game-board" data-testid="game-board">
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>
       <div className="game-info">
